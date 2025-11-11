@@ -1,0 +1,6 @@
+@EnercheckAPI_HostAddress = http://localhost:5178
+
+GET {{EnercheckAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
