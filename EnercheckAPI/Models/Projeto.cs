@@ -7,16 +7,25 @@ namespace EnercheckAPI.Models
     public class Projeto
     {
         public Guid ProjetoId { get; set; }
-        public Guid UsuarioId { get; set; }
-        public IdentityUser? Usuario { get; set; }
+
+        public string UsuarioId { get; set; }
+        public Usuario? Usuario { get; set; }
+
+
+        public DateTime? DataCriacao { get; set; }
+
         [Required]
         [Display(Name = "Nomde do Projetos")]
+        [StringLength(100)]
         public string? Nome { get; set; }
-        public DateTime? DataCriacao { get; set; }
+
+        [Range(0, 100)]
         public int Progresso { get; set; }
+
         [Display(Name = "Descrição do projeto")]
         [DataType(DataType.MultilineText)]
+        [StringLength(600)]
         public string? Descricao { get; set; }
-        public JsonArray? Analise { get; set; }
+        public string Analise { get; set; }
     }
 }
