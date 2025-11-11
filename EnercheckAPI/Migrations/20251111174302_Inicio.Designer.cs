@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EnercheckAPI.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20251111171853_Fodase")]
-    partial class Fodase
+    [Migration("20251111174302_Inicio")]
+    partial class Inicio
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -12,11 +12,17 @@ builder.Services.AddDbContext<ApiDbContext>(options =>
     options.UseSqlServer(connectionString)
 );
 
-builder.Services.AddIdentity<Usuario, IdentityRole>(options =>
+builder.Services.AddIdentityApiEndpoints<Usuario>(options =>
 {
     options.SignIn.RequireConfirmedEmail = false;
     options.SignIn.RequireConfirmedAccount = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireDigit = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequiredLength = 4;
 })
+    .AddRoles<IdentityRole>()
  .AddEntityFrameworkStores<ApiDbContext>()
  .AddDefaultTokenProviders();
 
