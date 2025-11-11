@@ -16,6 +16,6 @@ namespace EnercheckAPI.Models
 
         public Plano? Plano { get; set; }
 
-        public ICollection<Projeto> Projeto { get; set; }
+        public ICollection<Projeto>? Projeto { get; set; }
     }
 }

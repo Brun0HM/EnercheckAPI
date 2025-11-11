@@ -12,7 +12,8 @@ builder.Services.AddDbContext<ApiDbContext>(options =>
     options.UseSqlServer(connectionString)
 );
 
-builder.Services.AddIdentityApiEndpoints<Usuario>(options =>
+
+builder.Services.AddIdentity<Usuario, IdentityRole>(options =>
 {
     options.SignIn.RequireConfirmedEmail = false;
     options.SignIn.RequireConfirmedAccount = false;
