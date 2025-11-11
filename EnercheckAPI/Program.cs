@@ -58,7 +58,7 @@ app.MapGet("/", context =>
     return Task.CompletedTask;
 });
 
-app.MapIdentityApi<Usuario>();
+app.MapIdentityApi<IdentityUser>();
 
 app.MapOpenApi();
 
